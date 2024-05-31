@@ -1,0 +1,26 @@
+type Query{
+    getAllUsers : [User]
+    getUserById(id : ID!) :User
+}
+type Mutation{
+    createUser(userRequest : UserRequest):User
+    updateUser(userRequest : UserRequest):User
+    deleteUser(id:ID):Boolean
+}
+
+type User{
+    id:ID
+    username:String
+    mail:String
+    role:Role
+}
+enum Role{
+    USER
+    ADMIN
+}
+input UserRequest{
+    id:ID
+    username:String
+    mail:String
+    role:Role
+}

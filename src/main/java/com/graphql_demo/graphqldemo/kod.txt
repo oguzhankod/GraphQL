@@ -1,0 +1,38 @@
+query {
+    getUserById(id:4) {
+        id
+        username
+        mail
+    }
+}
+
+
+
+query {
+    getAllUsers {
+        id
+        username
+        mail
+    }
+}
+
+
+mutation {
+    createUser(userRequest:{username:"Kodd",mail:"oguzhankod@mail.com",role:USER}) {
+        id
+        username
+  }
+}
+
+
+mutation{
+  deleteUser(id:9)
+}
+
+
+mutation{
+  updateUser(userRequest:{id:10,username:"ne",mail:"ne@mail.com"}){
+    id
+    username
+  }
+}
